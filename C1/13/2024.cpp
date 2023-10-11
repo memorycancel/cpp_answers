@@ -15,6 +15,20 @@ int fib(int n)
 	return fib(n-1) + fib(n-2);
 }
 
+// put the middle result in [mem]ory
+// O(n)
+// 1982175104
+//--------------------------------
+//Process exited after 0.1346 seconds with return value 0
+int fib_mem(int n, vector<int> &mem)
+{
+	if(n == 1 || n == 2) return 1;
+	if(mem[n] != -1) return mem[n];
+	int res = fib_mem(n - 1, mem) + fib_mem(n - 2, mem);
+	mem[n] = res;
+	return res;
+}
+
 // O(n)
 //45
 //1134903170
@@ -43,6 +57,7 @@ int main()
 	cin >> n;
 	cout << fib(n);
 //	cout << fib_pro(n);
+//	cout << fib_mem(n);
 	return 0;
 }
 
