@@ -18,7 +18,7 @@ int main()
     string res="";
     for(int i=poses.front();i<=poses.back();i++)
     {
-        if(s[i]>='a'&&s[i]<='z') res+=s[i];
+        if(s[i]!=' ') res+=s[i];
     }
     cout<<res;
 
