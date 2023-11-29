@@ -1,44 +1,38 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-string to_b(long long n)
+void output_digit(int d)
 {
-    string res="";
-    while(n)
-    {
-        res.insert(0,to_string(n%2));
-        n/=2;
-    }
-    return res;
+    if(d>=10) cout<<(char)('A'+d-10);
+    else cout<<(char)('0'+d);
 }
 
-vector<string> to_arrs(string b)
+void output_code(int s)
 {
-    vector<string> res;
-    for(int i=b.size()-7;i>=0;i-=7)
-    {
-        string s="";
-        res.push_back(b.substr(i,7));
-    }
-    int left_len=b.size()-res.size()*7;
-    string s="";
-    for(int i=0;i<left_len+1;i++)
-    {
-        s+="0";
-    }
-    s+=b.substr(0,left_len);
-    res.push_back(s);
-    return res;
+    output_digit(s>>4);
+    output_digit(s&0x0f);
 }
 
 int main()
 {
-    vector<string> vs=to_arrs(to_b(926));
-    for(int i=0;i<vs.size();i++)
+    long long n=0;
+    cin>>n;
+    int split[10];
+    int l=0;
+    while(n>0)
     {
-        cout<<vs[i]<<' ';
+        split[l]=(int)(n&0x7f);
+        n>>=7;
+        l++;
     }
+    for(int i=0;i<l-1;i++) split[i]|=0x80;
+    output_code(split[0]);
+    for(int i=1;i<l;i++)
+    {
+        cout<<" ";
+        output_code(split[i]);
+    }
+    cout<<endl;
 
     return 0;
 }
