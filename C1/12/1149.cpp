@@ -13,8 +13,8 @@ int main()
 		else
 			sum2 += i;
 	}
-	
+
 	cout << sum1 << " " << sum2;
-	
+
 	return 0;
 }

@@ -14,13 +14,13 @@ int main()
 			cin >> tmp;
 			res[j] += tmp;
 			res[3] += tmp;
-		}	
+		}
 	}
 	for(int i=0; i<4; i++)
 	{
 		cout << res[i] << " ";
 	}
 	cout << endl;
-	
+
 	return 0;
 }

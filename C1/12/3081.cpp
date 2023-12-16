@@ -6,18 +6,40 @@ using namespace std;
 //3 3 3
 //4 4 4 4
 
+// int main()
+// {
+//  for(int i=1; i*(i-1)<=2*k; i++)
+//  {
+//      for(int j=1; j<=i; j++)
+//      {
+//          sum += i;
+//      }
+//  }
+//  return 0;
+// }
+
+
 int main()
 {
-	// 天数在第i行 
-	for(int i=1; i*(i-1)<=2*k; i++)
-	{
-		// 累加前 i-1行
-		for(int j=1; j<=i; j++)
-		{
-			sum += i;
-		}
-		// 加上本行i个
-		
-	}
-	return 0;
+    int n;
+    cin>>n;
+    int i=1;
+    int res=0;
+    int day=0;
+    while(1)
+    {
+        for(int j=0;j<i;j++)
+        {
+            day++;
+            res+=i;
+            if(day==n)
+            {
+                cout<<res;
+                return 0;
+            }
+        }
+        i++;
+    }
+
+    return 0;
 }

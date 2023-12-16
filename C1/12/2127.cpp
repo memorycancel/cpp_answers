@@ -2,7 +2,6 @@
 #include <vector>
 using namespace std;
 
-// 十进制转二进制：短除法 
 int main()
 {
 	int n;

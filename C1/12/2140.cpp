@@ -17,12 +17,12 @@ int main()
 			res[j] += tmp;
 		}
 	}
-	
+
 	for(int j=0; j<3; j++)
 	{
 		int tmp = res[j] / n;
 		cout << tmp << " ";
 	}
-	
+
 	return 0;
 }

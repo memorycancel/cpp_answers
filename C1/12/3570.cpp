@@ -5,7 +5,7 @@ int main()
 {
 	int m, n;
 	cin >> m >> n;
-	
+
 	for(int i=0; i<m; i++)
 	{
 		cout << '#';
@@ -16,6 +16,6 @@ int main()
 		cout << '#';
 		cout << endl;
 	}
-	
+
 	return 0;
 }
