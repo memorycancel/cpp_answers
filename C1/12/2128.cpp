@@ -1,27 +1,13 @@
 #include <iostream>
-#include <vector>
+#include <cmath>
 
 using namespace std;
 
 int main()
 {
-	int n, res = 0, power = 0;
-	cin >> n;
-	while(n != 0)
-	{
-		if(n % 10 == 1)
-		{
-			int powers = 1;
-			for(int i=0; i<power; i++)
-			{
-				powers *= 2;
-			}
-			res += powers;
-		}
-		n /= 10;
-		power += 1;
-	}
-	cout << res;
-
-	return 0;
+    string n;cin>>n;
+    int res=0;
+    for(int i=0;i<n.size();i++)
+        res+=(n[i]-'0')*pow(2,n.size()-i-1);
+    cout<<res;
 }

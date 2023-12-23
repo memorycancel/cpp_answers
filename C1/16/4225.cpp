@@ -5,17 +5,17 @@ using namespace std;
 //   2     2(11 2)
 //   3     4(111 12 21 3)
 //   4     7(=1+2+4)
-//   ÀàËÆfibÊýÁÐ
+
 
 int main()
 {
 	int n;
 	cin >> n;
-	
+
 	if(n == 1 || n == 2)
 	{
 		cout << n;
-		return 0;	
+		return 0;
 	}
 	else if(n == 3)
 	{
@@ -35,7 +35,7 @@ int main()
 		}
 		cout << current;
 	}
-	
+
 	return 0;
 }
 
